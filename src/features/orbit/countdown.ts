@@ -48,7 +48,7 @@ export function formatFiveHourReset(resetsAt: number | null, now = Date.now()): 
   return `${hours} 小时 ${minutes} 分后重置`;
 }
 
-export function formatWeeklyReset(resetsAt: number | null, locale?: string): string {
+export function formatWeeklyReset(resetsAt: number | null, locale = 'zh-CN'): string {
   if (resetsAt === null) {
     return '周额度暂不可用';
   }

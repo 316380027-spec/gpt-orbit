@@ -19,6 +19,6 @@ Final Windows checks:
 
 Final automated checks:
 
-- Frontend: 16 files / 109 tests passed, including real Standard/Weekly production bundle isolation and delayed/cancelled Weekly collapse coverage.
+- Frontend: 16 files / 110 tests passed, including real Standard/Weekly production bundle isolation, delayed/cancelled Weekly collapse coverage, and locale-independent Chinese reset copy.
 - Rust: 102 unit + 47 integration tests passed; clippy and rustfmt checks passed.
 - The focused final review found no Critical or Important issue.

@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import {
   formatCompactCountdown,
   formatFiveHourReset,
@@ -26,6 +26,18 @@ describe('countdown formatters', () => {
 
     expect(formatWeeklyReset(mondayReset, 'zh-CN')).toBe('周一 09:30 重置');
     expect(formatWeeklyReset(null, 'zh-CN')).toBe('周额度暂不可用');
+  });
+
+  it('defaults weekly reset copy to Chinese independently of the OS locale', () => {
+    const mondayReset = new Date(2026, 6, 13, 9, 30, 0).getTime() / 1000;
+    const formatter = vi.spyOn(Intl, 'DateTimeFormat');
+
+    try {
+      formatWeeklyReset(mondayReset);
+      expect(formatter).toHaveBeenCalledWith('zh-CN', { weekday: 'short' });
+    } finally {
+      formatter.mockRestore();
+    }
   });
 
   it('formats weekly compact countdowns as rounded-up days and hours', () => {

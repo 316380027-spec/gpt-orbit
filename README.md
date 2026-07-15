@@ -61,7 +61,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/release/check-public
 
 当前版本只声明以下已验证场景：
 
-- 前端 109 项测试与 Rust 149 项单元/集成测试通过，Weekly 构建通过。
+- 前端 110 项测试与 Rust 149 项单元/集成测试通过，Weekly 构建通过。
 - 当前用户安装包具有独立应用标识，并能保存窗口位置。
 - 实时值、明确的零值、断线后过期回退、异常响应拒绝与恢复流程已通过本地回环集成测试。
 - 仓库中的折叠截图来自已安装的 Gpt Orbit Weekly；安装包字节数与 SHA-256 记录在 [`docs/acceptance/release-manifest.md`](docs/acceptance/release-manifest.md)。
