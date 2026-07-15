@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Gpt Orbit Weekly",
+  "mainBinaryName": "gpt-orbit-weekly",
+  "identifier": "com.codex-orbit.weekly",
+  "build": {
+    "beforeDevCommand": "npm run dev:weekly",
+    "beforeBuildCommand": "npm run build:weekly"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "",
+        "width": 104,
+        "height": 86,
+        "minWidth": 104,
+        "minHeight": 68,
+        "maxWidth": 153,
+        "maxHeight": 86,
+        "transparent": true,
+        "decorations": false,
+        "resizable": false,
+        "shadow": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false
+      }
+    ]
+  }
+}

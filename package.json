@@ -1,0 +1,43 @@
+{
+  "name": "gpt-orbit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite --port 1420",
+    "dev:weekly": "vite --mode weekly --port 1420",
+    "build": "tsc -b && vite build",
+    "build:weekly": "tsc -b && vite build --mode weekly",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest",
+    "test:release-workflow": "node --test scripts/release/validate-release-workflow.node.mjs",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:build:weekly": "tauri build --config src-tauri/tauri.weekly.conf.json",
+    "rust:test": "cargo test --manifest-path src-tauri/Cargo.toml"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0",
+    "yaml": "^2.9.0"
+  }
+}

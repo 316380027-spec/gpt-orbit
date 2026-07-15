@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Gpt Orbit icon">
+  <circle cx="512" cy="512" r="448" fill="#0b1f3a" />
+  <ellipse
+    cx="512"
+    cy="512"
+    rx="330"
+    ry="188"
+    fill="none"
+    stroke="#42e8e0"
+    stroke-width="64"
+    transform="rotate(-24 512 512)"
+  />
+</svg>

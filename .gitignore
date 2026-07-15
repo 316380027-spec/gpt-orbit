@@ -1,0 +1,14 @@
+.worktrees/
+.superpowers/
+.superpowers/sdd/
+.playwright-cli/
+node_modules/
+dist/
+target/
+src-tauri/target/
+artifacts/
+output/
+.env
+.env.*
+*.log
+.DS_Store

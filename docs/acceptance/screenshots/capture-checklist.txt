@@ -1,0 +1,9 @@
+﻿Gpt Orbit Weekly capture checklist
+- Place the widget near the upper-right corner of a realistic dark Windows desktop.
+- Capture the native-size Quiet Prism orb and badge inside the 104 x 86 canvas.
+- Capture the native-size Quiet Prism capsule and badge inside the 153 x 68 canvas.
+- The weekly widget has one face: five-hour content must be absent and click must not flip it.
+- Confirm the violet badge remains fully visible on the right in both states.
+- Confirm no native window title is visible through transparent pixels.
+- Do not include account emails, auth URLs, tokens, browser content, or conversation content.
+- Save the installed collapsed image as weekly-collapsed.png. If an installed expanded capture is completed later, save it as weekly-installed-expanded.png; the installed expanded capture remains NOT RUN and no installed expanded image is currently retained.

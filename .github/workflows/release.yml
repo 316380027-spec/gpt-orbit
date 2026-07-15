@@ -1,0 +1,48 @@
+name: Release Weekly for Windows
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Set up stable Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Validate release workflow
+        run: npm run test:release-workflow
+
+      - name: Test frontend
+        run: npm test -- --run
+
+      - name: Test Rust
+        run: npm run rust:test
+
+      - name: Build and publish Weekly installer
+        uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: v__VERSION__
+          releaseName: Gpt Orbit v__VERSION__
+          releaseDraft: true
+          prerelease: false
+          args: --config src-tauri/tauri.weekly.conf.json
