@@ -97,6 +97,9 @@ export function validateReleaseWorkflow(source) {
     (step) => step.uses === 'tauri-apps/tauri-action@v1',
     'Tauri publish',
   );
+  if (publishStep.if !== "github.ref_name != 'v0.1.0'") {
+    throw new Error('Tauri publish must skip the manually published v0.1.0 release');
+  }
   const environment = requireExactKeys(publishStep.env, ['GITHUB_TOKEN'], 'Tauri publish env');
   if (environment.GITHUB_TOKEN !== '${{ secrets.GITHUB_TOKEN }}') {
     throw new Error('Tauri publish GITHUB_TOKEN must use secrets.GITHUB_TOKEN');

@@ -5,7 +5,7 @@ import test from 'node:test';
 import { validateReleaseWorkflow } from './validate-release-workflow.mjs';
 
 const workflowPath = new URL('../../.github/workflows/release.yml', import.meta.url);
-const validWorkflow = await readFile(workflowPath, 'utf8');
+const validWorkflow = (await readFile(workflowPath, 'utf8')).replaceAll('\r\n', '\n');
 
 function replace(source, expected, replacement) {
   assert.ok(source.includes(expected), `Fixture did not contain: ${expected}`);
@@ -20,6 +20,12 @@ function rejects(name, source) {
 
 test('accepts the checked-in release workflow', () => {
   assert.doesNotThrow(() => validateReleaseWorkflow(validWorkflow));
+});
+
+test('requires the manual v0.1.0 release guard', () => {
+  const withoutGuard = validWorkflow.replace("        if: github.ref_name != 'v0.1.0'\n", '');
+  assert.notEqual(withoutGuard, validWorkflow, 'Fixture must contain the v0.1.0 guard');
+  assert.throws(() => validateReleaseWorkflow(withoutGuard));
 });
 
 rejects(

@@ -37,6 +37,7 @@ jobs:
         run: npm run rust:test
 
       - name: Build and publish Weekly installer
+        if: github.ref_name != 'v0.1.0'
         uses: tauri-apps/tauri-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
