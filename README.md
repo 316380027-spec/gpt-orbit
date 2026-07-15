@@ -8,7 +8,7 @@
 
 [前往最新版本下载页](https://github.com/316380027-spec/gpt-orbit/releases/latest)
 
-首发 `v0.1.0` 只提供一个 Windows x64 安装包：`Gpt Orbit Weekly_0.1.0_x64-setup.exe`。请只从上述 GitHub Releases 页面下载。
+首发 `v0.1.0` 只提供一个 Windows x64 安装包：`Gpt.Orbit.Weekly_0.1.0_x64-setup.exe`。请只从上述 GitHub Releases 页面下载。
 
 ## 功能
 
@@ -26,7 +26,7 @@
 
 ## 安装
 
-1. 从[最新版本下载页](https://github.com/316380027-spec/gpt-orbit/releases/latest)下载 `Gpt Orbit Weekly_0.1.0_x64-setup.exe`。
+1. 从[最新版本下载页](https://github.com/316380027-spec/gpt-orbit/releases/latest)下载 `Gpt.Orbit.Weekly_0.1.0_x64-setup.exe`。
 2. 运行当前用户 NSIS 安装程序；如 Windows 显示来源提示，请核对文件名及 Release 页面中的 SHA-256。
 3. 保持官方 Codex 登录有效，然后启动 Gpt Orbit。
 

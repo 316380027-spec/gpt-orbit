@@ -36,7 +36,7 @@ Status legend: PASS, FAIL, BLOCKED, NOT RUN.
 | Simultaneous process | Installed `codex-orbit.exe` and `gpt-orbit-weekly.exe` run concurrently | PASS | Final HEAD installed processes remained responsive concurrently for more than 12 seconds |
 | Independent placement | Standard and weekly widgets use independent saved placement | PASS | Separate identifiers and preference tests; Weekly restored at 104 x 86 |
 | Installer | Standard current-user NSIS installer produced | PASS | Release asset `Gpt Orbit_0.1.0_x64-setup.exe`; 3,216,034 bytes; SHA-256 `F619E2B2B0038C56F50F9887E06CB1A6D05FFED24290C49CBC70E515741E77D3` |
-| Installer | Weekly current-user NSIS installer produced | PASS | Release asset `Gpt Orbit Weekly_0.1.0_x64-setup.exe`; 3,221,444 bytes; SHA-256 `8274ADBEF4E802B255EC0C03E7CDBD14AC4B6B561C4EF8BC06E2DEC13A7E44AF` |
+| Installer | Weekly current-user NSIS installer produced | PASS | Release asset `Gpt.Orbit.Weekly_0.1.0_x64-setup.exe`; 3,221,444 bytes; SHA-256 `8274ADBEF4E802B255EC0C03E7CDBD14AC4B6B561C4EF8BC06E2DEC13A7E44AF` |
 | Installer | Upgrade preserves placement and preferences | PASS | Silent current-user upgrade over the earlier packages retained separate Standard and Weekly position/topmost preference files |
 | Installer | Uninstall removes app/autostart without touching Codex credentials | NOT RUN | Manual install matrix |
 | Live comparison | Weekly badge matches a one-shot GET whose stdout is the `available_count` integer only | PASS | Final installed accessibility exposed badge integer `3`; one GET with redirects disabled, 10s timeout, and 64KiB cap printed only integer `3` |

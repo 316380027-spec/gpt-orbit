@@ -6,7 +6,7 @@
 
 | Product | Release asset | Bytes | SHA-256 |
 | --- | --- | ---: | --- |
-| Gpt Orbit Weekly | `Gpt Orbit Weekly_0.1.0_x64-setup.exe` | 3,221,444 | `8274ADBEF4E802B255EC0C03E7CDBD14AC4B6B561C4EF8BC06E2DEC13A7E44AF` |
+| Gpt Orbit Weekly | `Gpt.Orbit.Weekly_0.1.0_x64-setup.exe` | 3,221,444 | `8274ADBEF4E802B255EC0C03E7CDBD14AC4B6B561C4EF8BC06E2DEC13A7E44AF` |
 
 Final Windows checks:
 
