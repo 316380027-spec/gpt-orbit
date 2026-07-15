@@ -441,7 +441,7 @@ fn acceptance_assets_freeze_weekly_visual_and_coexistence_contract() {
         "Simultaneous process",
         "Independent placement",
         "Gpt Orbit_0.1.0_x64-setup.exe",
-        "Gpt Orbit Weekly_0.1.0_x64-setup.exe",
+        "Gpt.Orbit.Weekly_0.1.0_x64-setup.exe",
     ] {
         assert!(
             matrix.contains(required),
